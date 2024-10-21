@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Ocultar el scroll horizontal */
+}
+
+.container {
+  background: linear-gradient(135deg, #444 60%, #6A6A6A 40%); /* Fondo dividido en diagonal */
+  color: white;
+  min-height: 100vh; /* Cambiar a min-height para permitir que el contenido se expanda */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Cambiar para que el contenido no esté centrado verticalmente */
+  align-items: flex-start; /* Alinear los elementos a la izquierda */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Espaciar el logo y el icono de menú */
+  align-items: center;
+  width: 100%;
+  height: 80px; /* Altura fija para el header */
+  padding: 0 30px; /* Padding lateral */
+  background-color: #333;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 250px; /* Hacer el logo más grande */
+  max-width: 100%; /* Asegurar que sea responsive */
+  margin: 0 auto;
+}
+
+.content {
+  text-align: left; /* Alinear el texto a la izquierda */
+  padding: 80px; /* Añadir padding para mejorar el espaciado */
+  width: 100%; /* Asegurar que el contenido ocupe el 100% del ancho */
+  max-width: 1200px; /* Ancho máximo para el contenido */
+}
+
+.quote {
+  font-style: italic;
+  font-size: 32px; /* Aumentar tamaño de texto */
+  margin-bottom: 100px;
+}
+
+.highlight {
+  color: #00aaff; /* Color azul para destacar */
+  font-weight: bold; /* Hacer el texto destacado más audaz */
+}
+
+.content p {
+  font-size: 30px; /* Aumentar tamaño de texto descriptivo */
+  margin: 35px 0; /* Añadir margen vertical a los párrafos */
+}
+
+.translate-button {
+  margin-top: 20px;
+  background-color: #00aaff;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 54px; /* Ajustar tamaño de fuente del botón */
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.translate-button:hover {
+  background-color: #007acc; /* Cambia color al pasar el mouse */
+}
+
+/* Nueva sección después del botón TRADUCIR */
+.content-section {
+  background-color: white; /* Fondo blanco para esta sección */
+  padding: 60px 20px;
+  text-align: center; /* Centrar el título */
+}
+
+.content-section h2 {
+  font-size: 36px;
+  color: #444; /* Color oscuro para el título */
+  margin-bottom: 40px;
+}
+
+/* Estilo para las tarjetas */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px; /* Espacio entre tarjetas */
+  padding: 20px;
+  justify-content: center; /* Centrar las tarjetas en el contenedor */
+}

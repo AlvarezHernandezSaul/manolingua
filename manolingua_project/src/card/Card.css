@@ -1,0 +1,36 @@
+.card {
+    background-color: rgb(150, 150, 150); /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Para que la imagen respete los bordes redondeados */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el contenido dentro de la tarjeta */
+    padding: 10px; /* Espacio interno en la tarjeta */
+  }
+  
+  .card-image {
+    width: 100%; /* Asegurar que la imagen use el 100% del ancho */
+    display: flex;
+    justify-content: center; /* Centrar la imagen horizontalmente */
+  }
+  
+  .card-image img {
+    width: 80%; /* Ajustar el ancho de la imagen dentro de la tarjeta */
+    border-radius: 15px; /* Imagen con bordes redondeados */
+    margin: 10px; /* Espacio entre la imagen y el borde de la tarjeta */
+  }
+  
+  .card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el texto dentro de la tarjeta */
+  }
+  
+  .card-content h3 {
+    font-size: 20px;
+    color: #333;
+  }
+  
