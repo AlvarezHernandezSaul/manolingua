@@ -53,6 +53,7 @@ function App() {
             traducimos el lenguaje de señas en tiempo real para conectar a las personas
             de una manera más <span className="highlight">inclusiva</span> y
             <span className="highlight">futurista</span>.
+            A continuacion preciona para traducir
           </p>
           <button className="translate-button">TRADUCIR</button>
         </main>
