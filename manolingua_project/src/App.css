@@ -2,26 +2,27 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  overflow-x: hidden; /* Ocultar el scroll horizontal */
+  overflow-x: hidden;
 }
 
 .container {
-  background: linear-gradient(135deg, #444 60%, #6A6A6A 40%); /* Fondo dividido en diagonal */
+  background: linear-gradient(135deg, #444 60%, #6A6A6A 40%);
   color: white;
-  min-height: 100vh; /* Cambiar a min-height para permitir que el contenido se expanda */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Cambiar para que el contenido no esté centrado verticalmente */
-  align-items: flex-start; /* Alinear los elementos a la izquierda */
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto; /* Permitir scroll vertical si es necesario */
 }
 
 .header {
   display: flex;
-  justify-content: space-between; /* Espaciar el logo y el icono de menú */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 80px; /* Altura fija para el header */
-  padding: 0 30px; /* Padding lateral */
+  height: 80px;
+  padding: 0 30px;
   background-color: #333;
 }
 
@@ -31,32 +32,30 @@ body {
 }
 
 .logo {
-  width: 250px; /* Hacer el logo más grande */
-  max-width: 100%; /* Asegurar que sea responsive */
-  margin: 0 auto;
+  width: 200px;
+  max-width: 100%;
 }
 
 .content {
-  text-align: left; /* Alinear el texto a la izquierda */
-  padding: 80px; /* Añadir padding para mejorar el espaciado */
-  width: 100%; /* Asegurar que el contenido ocupe el 100% del ancho */
-  max-width: 1200px; /* Ancho máximo para el contenido */
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .quote {
   font-style: italic;
-  font-size: 32px; /* Aumentar tamaño de texto */
-  margin-bottom: 100px;
+  font-size: 28px;
+  margin-bottom: 60px;
 }
 
 .highlight {
-  color: #00aaff; /* Color azul para destacar */
-  font-weight: bold; /* Hacer el texto destacado más audaz */
+  color: #00aaff;
+  font-weight: bold;
 }
 
 .content p {
-  font-size: 30px; /* Aumentar tamaño de texto descriptivo */
-  margin: 35px 0; /* Añadir margen vertical a los párrafos */
+  font-size: 24px;
+  margin: 20px 0;
 }
 
 .translate-button {
@@ -64,35 +63,100 @@ body {
   background-color: #00aaff;
   border: none;
   color: white;
-  padding: 15px 30px;
-  font-size: 54px; /* Ajustar tamaño de fuente del botón */
+  padding: 12px 24px;
+  font-size: 24px;
   font-weight: bold;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .translate-button:hover {
-  background-color: #007acc; /* Cambia color al pasar el mouse */
+  background-color: #007acc;
 }
 
-/* Nueva sección después del botón TRADUCIR */
 .content-section {
-  background-color: white; /* Fondo blanco para esta sección */
-  padding: 60px 20px;
-  text-align: center; /* Centrar el título */
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .content-section h2 {
-  font-size: 36px;
-  color: #444; /* Color oscuro para el título */
-  margin-bottom: 40px;
+  font-size: 30px;
+  color: #444;
+  margin-bottom: 20px;
 }
 
-/* Estilo para las tarjetas */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-  gap: 20px; /* Espacio entre tarjetas */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   padding: 20px;
-  justify-content: center; /* Centrar las tarjetas en el contenedor */
+  justify-items: center;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.camera-view {
+  border: 2px solid #000;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+
+  .quote {
+    font-size: 24px;
+  }
+
+  .translate-button {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
